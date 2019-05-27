@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+
+    <script>
+            function toggleMenu() {
+                const dropdown = document.getElementById('menu')
+                const displayValue = window.getComputedStyle(dropdown).getPropertyValue('display')
+                console.log(displayValue)
+                if (displayValue === 'none') {
+                    dropdown.style.display = 'block'
+                }
+                else dropdown.style.display = 'none'
+            }
+        
+        </script>
+</head>
+
+<body>
+    <section class="top">
+        <header class="header">
+            <div class="logo">
+                <h1>Start Bootstrap</h1>
+            </div>
+            <div class="navigation">
+                <ul>
+                    <li>SERVICES</li>
+                    <li>PORTFOLIO</li>
+                    <li>ABOUT</li>
+                    <li>TEAM</li>
+                    <li>CONTACT</li>
+                </ul>
+            </div>
+            <button id="menu-btn" type='checkbox' value='MENU' onclick="toggleMenu()">
+                MENU
+                <div class="bars">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+            </button>
+        </header>
+        <section id="menu">
+            <ul id="menu-list">
+                <li>SERVICES</li>
+                <li>PORTFOLIO</li>
+                <li>ABOUT</li>
+                <li>TEAM</li>
+                <li>CONTACT</li>
+            </ul>
+        </section>
+        <section class="header-body">
+            <div class="header-content">
+                <h2><i>Welcome To Our Studio!</i></h2>
+                <h1>IT'S NICE TO MEET YOU</h1>
+                <button>TELL ME MORE</button>
+            </div>
+
+        </section>
+    </section>
+</body>
+
+</html>
